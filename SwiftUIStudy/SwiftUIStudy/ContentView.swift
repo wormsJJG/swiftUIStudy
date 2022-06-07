@@ -11,8 +11,8 @@ struct ContentView: View {
     @State var id: String = ""
     @State var passWord: String = ""
     var body: some View {
-        NavigationView {
-            VStack{
+        NavigationView{
+            VStack(alignment: .center, spacing: 20){
                 TextField("아이디", text: $id)
                     .padding()
                     .background(Color(uiColor: .orange))
@@ -27,22 +27,23 @@ struct ContentView: View {
                 Button("로그인"){
                     
                 }
+                .tint(.white)
+                
                 .background(Color(uiColor: .orange))
                 .buttonStyle(.bordered)
                 .cornerRadius(10)
+               
+                Button("계정이 없으십니까? 회원가입"){
+                    
+                }
+                .padding(.top)
             }
             .padding()
-            .background(Color(uiColor: .yellow))
-            
-
-            
-            
-            
             .navigationTitle("로그인")
         }
     }
-    
 }
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
